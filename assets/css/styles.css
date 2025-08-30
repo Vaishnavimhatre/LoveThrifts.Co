@@ -1,0 +1,96 @@
+/* LoveThrifts.Co — Starter Styles */
+:root{
+  --bg:#fff;
+  --text:#0f172a;
+  --muted:#475569;
+  --accent:#ec4899;
+  --accent-ink:#fff;
+  --card:#f8fafc;
+  --border:#e2e8f0;
+  --shadow: 0 10px 25px rgba(2,6,23,.08);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+}
+a{color:inherit}
+.container{max-width:1100px;margin:0 auto;padding:0 1rem}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;background:#fff;border:2px solid var(--accent);padding:.5rem 1rem;border-radius:10px;z-index:1000}
+
+.site-header{
+  position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(10px);
+  border-bottom:1px solid var(--border); z-index:100;
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 0}
+.brand a{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:700}
+.logo{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:12px;background:var(--accent);color:var(--accent-ink);font-weight:800}
+.brand-text{letter-spacing:.3px}
+.nav-toggle{display:none;font-size:1.2rem;background:none;border:1px solid var(--border);padding:.4rem .6rem;border-radius:10px}
+.site-nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+.site-nav a{display:inline-block;text-decoration:none;padding:.5rem .7rem;border-radius:12px}
+.site-nav a:hover{background:var(--card)}
+
+.hero{padding:5rem 0 3rem;background:radial-gradient(1200px 400px at 20% -10%, rgba(236,72,153,.12), transparent 60%)}
+.hero-inner{display:grid;gap:1rem;place-items:start}
+.hero h1{font-size:clamp(32px, 5vw, 52px);line-height:1.1;margin:0}
+.accent{color:var(--accent)}
+.cta{display:flex;gap:.8rem;margin-top:.6rem}
+
+.btn{border-radius:999px;padding:.7rem 1rem;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--border);box-shadow:var(--shadow)}
+.btn.solid{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.btn.outline{background:#fff}
+.btn.ghost{background:transparent;border-color:transparent;box-shadow:none}
+
+.section{padding:3rem 0}
+.section.alt{background:var(--card)}
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+.section h2{margin:0;font-size:1.6rem}
+.filters{display:flex;gap:.6rem}
+.filters input, .filters select{
+  border:1px solid var(--border);border-radius:12px;padding:.6rem .8rem;min-width:220px;background:#fff
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat( auto-fill, minmax(220px, 1fr) );
+  gap:1rem;
+}
+.card{background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.card .img{aspect-ratio:3/4;background:#eaeaea;display:grid;place-items:center}
+.card .img img{width:100%;height:100%;object-fit:cover;display:block}
+.card .body{padding:.9rem}
+.card .title{font-weight:700;margin:0 0 .2rem 0}
+.meta{display:flex;align-items:center;justify-content:space-between;color:var(--muted);font-size:.9rem}
+.price{font-weight:800;color:var(--text)}
+.badge{font-size:.75rem;padding:.2rem .5rem;border-radius:999px;background:var(--card);border:1px solid var(--border)}
+
+.two-col{display:grid;grid-template-columns:1.1fr .9fr;gap:1rem;align-items:start}
+.ticks{list-style:none;padding:0;margin:.5rem 0 0 0}
+.ticks li{padding-left:1.4rem;position:relative}
+.ticks li:before{content:"✓";position:absolute;left:0;color:var(--accent);font-weight:700}
+
+.card.info{padding:1rem}
+.card.info h3{margin:.2rem 0 .6rem 0}
+
+.contact-form{margin-top:.5rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-grid .full{grid-column:1/-1}
+input, textarea, select{
+  width:100%;padding:.7rem;border:1px solid var(--border);border-radius:12px;background:#fff
+}
+
+.center{text-align:center;margin-top:1rem}
+.site-footer{border-top:1px solid var(--border);padding:2rem 0;margin-top:2rem}
+.footer-inner{display:flex;align-items:center;justify-content:space-between}
+
+@media (max-width: 800px){
+  .two-col{grid-template-columns:1fr}
+  .site-nav{display:none;position:absolute;right:1rem;top:58px;background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow)}
+  .site-nav ul{flex-direction:column;padding:.4rem}
+  .site-nav a{padding:.6rem .8rem}
+  .nav-toggle{display:block}
+}
