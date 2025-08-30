@@ -54,6 +54,12 @@ a{color:inherit}
   border:1px solid var(--border);border-radius:12px;padding:.6rem .8rem;min-width:220px;background:#fff
 }
 
+.logo-img {
+  height: 40px;
+  width: auto;
+  border-radius: 8px; /* optional: makes corners round */
+}
+
 .grid{
   display:grid;
   grid-template-columns: repeat( auto-fill, minmax(220px, 1fr) );
